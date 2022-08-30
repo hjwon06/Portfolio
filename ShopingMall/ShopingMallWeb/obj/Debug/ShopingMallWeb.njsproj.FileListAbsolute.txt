@@ -1,0 +1,3 @@
+C:\Users\Jwon\OneDrive\바탕 화면\Portfolio\ShopingMall\ShopingMallWeb\obj\Debug\ShopingMallWeb.njsproj.AssemblyReference.cache
+C:\Users\Jwon\OneDrive\바탕 화면\Portfolio\ShopingMall\ShopingMallWeb\obj\Debug\ShopingMallWeb.njsproj.CoreCompileInputs.cache
+C:\Users\Jwon\OneDrive\바탕 화면\Portfolio\ShopingMall\ShopingMallWeb\bin\Microsoft.NodejsTools.WebRole.dll

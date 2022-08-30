@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<style>
+    @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+    @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+    @media (max-width: 768px) {
+        #container, #footer, #header {
+            min-width: 220px;
+            margin: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media (max-width: 1940px) {
+        #container {
+            width: auto;
+            max-width: 768px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #content {
+            max-width: 465px;
+            width: auto;
+        }
+    }
+
+    @media (max-width: 1940px) {
+        #content {
+            width: 465px;
+            margin: 0 auto;
+        }
+    }
+
+    ::placeholder {
+        color: rgba(0, 0, 0, 0.35);
+    }
+
+    .aTag {
+        float: left;
+        margin-top: 20px;
+        font-size: 10px;
+        text-decoration: none;
+    }
+
+    .aText {
+        color: rgba(0, 0, 0, 0.35) !important;
+    }
+
+    .textBox {
+        width: 470px;
+        height: 200px;
+        padding: 20px 15px 0px 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loginBox {
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .btnBox {
+        text-align: right;
+        padding-top: 15px;
+    }
+
+
+    .boxName {
+        float: left;
+        padding: 10px;
+    }
+
+    .logText.idText {
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+
+    .lineText {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 12px;
+        margin: 25px 0px;
+    }
+
+        .lineText::before,
+        .lineText::after {
+            content: "";
+            flex-grow: 1;
+            background: rgba(0, 0, 0, 0.35);
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            margin: 0px 16px;
+        }
+
+    .logText {
+        padding: 0 15px;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border: none;
+        font-size: 14px;
+        color: #000;
+        box-sizing: border-box;
+    }
+
+
+    .btn-gradient {
+        margin: 5px;
+        text-decoration: none;
+        color: white;
+        padding: 10px 30px;
+        display: inline-block;
+        position: relative;
+        border: 1px solid rgba(0,0,0,0.21);
+        border-bottom: 4px solid rgba(0,0,0,0.21);
+        border-radius: 4px;
+        text-shadow: 0 1px 0 rgb(0 0 0 / 15%);
+    }
+
+        .btn-gradient.red {
+            background: #E35252;
+        }
+
+        .btn-gradient.red {
+            background: rgba(250,90,90,1);
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(250,90,90,1)), to(rgba(232,81,81,1)));
+            background: -webkit-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+            background: -moz-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+            background: -o-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+            background: linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa5a5a', endColorstr='#e85151', GradientType=0 );
+        }
+
+        .btn-gradient.small {
+            padding: 8px 18px;
+            font-size: 14px;
+        }
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+function newPage()  {
+	  window.location.href = './join.html'
+}
+
+</script>
+<body>
+    <div id="container">
+        <div id="content">
+            <div class="textBox">
+                <p class="lineText">로그인</p>
+                <div class="loginBox">
+                    <input class="logText idText" type="text" placeholder="아이디">
+                    <input class="logText" type="password" placeholder="비밀번호">
+                </div>
+                <div class="btnBox">
+                    <div class="aTag">
+                        <a class="aText">아이디찾기</a>
+                        <span class="aText"> / </span>
+                        <a class="aText">비밀번호찾기</a>
+                    </div>
+                    <input class="btn-gradient red small" type="button" value="회원가입" onclick="newPage()">
+                    <input class="btn-gradient red small" type="button" value="로그인">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

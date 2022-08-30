@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<style>
+    @media (max-width: 768px) {
+        #container, #footer, #header {
+            min-width: 220px;
+            margin: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media (max-width: 1940px) {
+        #container {
+            width: auto;
+            max-width: 768px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #content {
+            max-width: 465px;
+            width: auto;
+        }
+    }
+
+    @media (max-width: 1940px) {
+        #content {
+            width: 465px;
+            margin: 0 auto;
+        }
+    }
+
+
+
+    #ct {
+        width: 400px;
+        height: 500px;
+        border: 1px solid;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .ps_box {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 51px;
+        border: solid 1px #dadada;
+        padding: 10px 110px 10px 14px;
+        background: #fff;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+
+    .int {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 29px;
+        padding-right: 25px;
+        line-height: 29px;
+        border: none;
+        background: #fff;
+        font-size: 15px;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    #bir_wrap {
+        display: table;
+        width: 100%;
+    }
+
+    .bir_dd, .bir_mm, .bir_yy {
+        display: table-cell;
+        table-layout: fixed;
+        width: 147px;
+        vertical-align: middle;
+        display: block;
+        float: left;
+    }
+
+    .join_birthday .ps_box {
+        padding: 11px 14px;
+    }
+
+    .bir_mm + .bir_dd, .bir_yy + .bir_mm {
+        padding-left: 10px;
+    }
+
+    .sel {
+        width: 100%;
+        height: 29px;
+        padding: 7px 8px 6px 7px\9;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000;
+        border: none;
+        border-radius: 0;
+        *height: auto;
+        /*-webkit-appearance: none;*/
+    }
+
+    .int_mobile_email {
+        position: relative;
+        margin-top: 10px;
+        padding: 0 125px 0 0;
+    }
+
+        .int_mobile_email .btn_verify {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 115px;
+            height: 51px;
+            padding: 18px 0 16px;
+            text-align: center;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+    @media (max-width: 1024px) {
+        .int_mobile_email .btn_verify {
+            padding: 17px 0 17px;
+        }
+    }
+
+    .btn_primary {
+        color: #fff;
+        border: solid 1px rgba(0,0,0,.08);
+        background-color: #03c75a;
+    }
+
+    .join_title {
+        margin: 19px 0 8px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .error_next_box {
+        display: none;
+        margin: 9px 0 -2px;
+        font-size: 12px;
+        line-height: 14px;
+        color: red;
+    }
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+
+	for(let i = 1; i < 13; i++) {
+		$("#month").append("<option value='"+ i +"'>" + i + "월</option>");
+
+	}
+
+
+}
+function weekChage() {
+	$("#week option").remove();
+	//$("#week").append("<option value=''>일</option>");
+
+	let num = Number($("#month").val());
+
+	switch (num) {
+	case 1:
+		for(let i = 1; i <= 31; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 2:
+		for(let i = 1; i <= 29; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 3:
+		for(let i = 1; i <= 31; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 4:
+		for(let i = 1; i <= 30; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 5:
+		for(let i = 1; i <= 31; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 6:
+		for(let i = 1; i <= 30; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 7:
+		for(let i = 1; i <= 31; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 8:
+		for(let i = 1; i <= 31; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 9:
+		for(let i = 1; i <= 30; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 10:
+		for(let i = 1; i <= 31; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 11:
+		for(let i = 1; i <= 30; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	case 12:
+		for(let i = 1; i <= 31; i++) {
+			$("#week").append("<option value='"+ i +"'>" + i + "일</option>");
+
+		}
+		break;
+	}
+
+
+}
+$("#idInput").on("focus",
+	function() {
+		alert("test");
+	}
+
+);
+function errorIdMsg() {
+	if($("#idInput").val() == null || $("#idInput").val() == "") {
+		$("#idMsg").css("display","block");
+		$("#idInput").focus();
+	}else {
+		$("#idMsg").css("display","none");
+	}
+}
+
+function errorPw1Msg() {
+	let reg = new RegExp("^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$");
+	if($("#pw1Input").val() == null || $("#pw1Input").val() == "") {
+		$("#pw1Msg").css("display","block");
+		$("#pw1Input").focus();
+	}else if(!reg.test($("#pw1Input").val())) {
+		$("#pw1Msg").css("display","block");
+		alert($("#pw1Input").val());
+		$("#pw1Msg").text("비밀번호 형식이 일치하지 않습니다.");
+	}else {
+		$("#pw1Msg").css("display","none");
+	}
+}
+
+function errorPw2Msg() {
+	if($("#pw2Input").val() == null || $("#pw2Input").val() == "") {
+		$("#pw2Msg").css("display","block");
+		$("#pw2Input").focus();
+	}else if($("#pw2Input").val() != $("#pw1Input").val()){
+		$("#pw2Msg").css("display","block");
+		$("#pw2Msg").text("비밀번호가 일치하지 않습니다.");
+	}else {
+		$("#pw2Msg").css("display","none");
+	}
+}
+</script>
+<body>
+    <div id="container">
+        <div id="content">
+            <div class="inClass" id="">
+                <h3 class="join_title">아이디</h3>
+                <span class="ps_box">
+                    <input class="int" type="text" id="idInput" onblur="errorIdMsg()">
+                </span>
+                <span class="error_next_box" id="idMsg">
+                    필수 정보입니다.
+                </span>
+
+            </div>
+            <div class="inClass">
+                <h3 class="join_title">비밀번호</h3>
+                <span class="ps_box">
+                    <input class="int" id="pw1Input" type="password" onblur="errorPw1Msg()">
+                </span>
+                <span class="error_next_box" id="pw1Msg">
+                    필수 정보입니다.
+                </span>
+            </div>
+            <div class="inClass" id="pwCheck">
+                <h3 class="join_title">비밀번호 확인</h3>
+                <span class="ps_box">
+                    <input class="int" id="pw2Input" type="password" onblur="errorPw2Msg()">
+                </span>
+                <span class="error_next_box" id="pw2Msg">
+                    필수 정보입니다.
+                </span>
+            </div>
+            <div class="inClass" id="nameInput">
+                <h3 class="join_title">이름</h3>
+                <span class="ps_box">
+                    <input class="int" type="text">
+                </span>
+                <span class="error_next_box" id="nmMsg">
+                    필수 정보입니다.
+                </span>
+            </div>
+            <div class="inClass join_birthday" id="bir_wrap">
+                <h3 class="join_title">생년월일</h3>
+                <div class="bir_yy">
+                    <span class="ps_box">
+                        <input class="int" type="text" placeholder="년 (4자)" maxlength="4">
+                    </span>
+                </div>
+                <div class="bir_mm">
+                    <span class="ps_box">
+                        <select id="month" name="month" onchange="weekChage()" class="sel">
+                            <option value="">월</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="bir_dd">
+                    <span class="ps_box">
+                        <select id="week" name="week" class="sel">
+                            <option value="">일</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="inClass" id="sexInput">
+                <h3 class="join_title">성별</h3>
+                <span class="ps_box">
+                    <select id="gender" name="gender" class="sel">
+                        <option value="1">남자</option>
+                        <option value="2">여자</option>
+                        <option value="0">선택안함</option>
+                    </select>
+                </span>
+
+            </div>
+            <div class="inClass" id="emailInput">
+                <h3 class="join_title">이메일 인증</h3>
+                <div class="int_mobile_email">
+                    <span class="ps_box">
+                        <input class="int" type="text">
+                    </span>
+                    <input class="btn_verify btn_primary" type="button" value="확인">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
